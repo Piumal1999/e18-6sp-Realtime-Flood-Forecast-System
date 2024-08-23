@@ -21,7 +21,7 @@ const Home: FC = () => {
             <Col span={12}>
               <Card title="Flood status" bordered={false}>
                 <Title style={{ marginTop: 0 }} type="danger">
-                  Flood
+                  Flood Warning
                 </Title>
               </Card>
             </Col>
@@ -36,7 +36,7 @@ const Home: FC = () => {
           <Row gutter={16}>
             <Col span={24}>
               <Card title="Real time water level" bordered={false} style={{justifyContent: "center", alignItems: "center" }}>
-                <CircularProgressBar waterLevel={80} />
+                <CircularProgressBar waterLevel={90} />
               </Card>
             </Col>
           </Row>
@@ -51,7 +51,7 @@ const Home: FC = () => {
           </Row>
           <Row gutter={16} style={{ marginBottom: "3rem" }}>
             <Col span={24}>
-              <Card bordered={false}>
+              <Card title="Station Water levels" bordered={false}>
                 <ReportsTable />
               </Card>
             </Col>

@@ -22,16 +22,22 @@ router.post("/signup", (req, res) => {
     if (user) {
       res.status(400).send("User already exists!");
     } else {
-      User.create(newUser, function (err, user) {
-        if (err) {
-          console.log(err);
-          res.status(400).send("Error creating user!");
-        } else {
-          const token = generateAccessToken({ user_id: user._id });
-          user = { ...user._doc, token: token };
-          res.status(201).json(user);
+      User.create(
+        newUser,
+        {
+          new: true,
+        },
+        function (err, user) {
+          if (err) {
+            console.log(err);
+            res.status(400).send("Error creating user!");
+          } else {
+            const token = generateAccessToken({ user_id: user._id });
+            user = { ...user._doc, token: token };
+            res.status(201).json(user);
+          }
         }
-      });
+      );
     }
   });
 });

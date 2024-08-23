@@ -24,18 +24,23 @@ const columns: ColumnsType<DataType> = [
 const data: DataType[] = [
   {
     key: "1",
-    StationName: "Station 1",
-    WaterLevel: 10,
+    StationName: "Atharagalla",
+    WaterLevel: 80,
   },
   {
     key: "2",
-    StationName: "Station 2",
-    WaterLevel: 15,
+    StationName: "Galgamuwa",
+    WaterLevel: 75,
   },
   {
     key: "3",
-    StationName: "Station 3",
-    WaterLevel: 8,
+    StationName: "Mediyawa",
+    WaterLevel: 30,
+  },
+  {
+    key: "4",
+    StationName: "Mahagalkadawala",
+    WaterLevel: 50,
   },
 ];
 
